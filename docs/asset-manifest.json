@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/satellite-viewer/static/css/main.e6c13ad2.css",
-    "main.js": "/satellite-viewer/static/js/main.fe8c5ba9.js",
-    "static/js/787.f823f2d3.chunk.js": "/satellite-viewer/static/js/787.f823f2d3.chunk.js",
+    "main.js": "/satellite-viewer/static/js/main.e8c3c285.js",
+    "static/js/875.4a13143a.chunk.js": "/satellite-viewer/static/js/875.4a13143a.chunk.js",
     "static/media/earthmap.jpg": "/satellite-viewer/static/media/earthmap.981cc3e3660e809249a3.jpg",
     "index.html": "/satellite-viewer/index.html",
     "main.e6c13ad2.css.map": "/satellite-viewer/static/css/main.e6c13ad2.css.map",
-    "main.fe8c5ba9.js.map": "/satellite-viewer/static/js/main.fe8c5ba9.js.map",
-    "787.f823f2d3.chunk.js.map": "/satellite-viewer/static/js/787.f823f2d3.chunk.js.map"
+    "main.e8c3c285.js.map": "/satellite-viewer/static/js/main.e8c3c285.js.map",
+    "875.4a13143a.chunk.js.map": "/satellite-viewer/static/js/875.4a13143a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.fe8c5ba9.js"
+    "static/js/main.e8c3c285.js"
   ]
 }
