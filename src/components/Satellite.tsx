@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import * as satellite from 'satellite.js'
 import * as THREE from "three";
 import useSolarSystemStore from "../store/useSolarSystemStore";
@@ -52,16 +52,27 @@ const Satellite = (props: SatelliteProps) => {
         while (continueTime.diff(endDate, 'day') !== 0) {
             continueTime = continueTime.add(1, 'minute')
             const position = _getSatellitePosition(continueTime.toDate())
-            orbitLineList.push(new THREE.Vector3(position.x, position.y, position.z))
+            orbitLineList.push(new THREE.Vector3(position.x , position.y , position.z ))
         }
         const lineBasicMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
         const bufferGeometry = new THREE.BufferGeometry().setFromPoints(orbitLineList);
         const line = new THREE.Line(bufferGeometry, lineBasicMaterial)
+        line.name = 'orbitLine'
         solarSystemScene.add(line)
     }
 
-    _makeSatellite();
-    _makeOrbitLine();
+    useEffect(() => {
+        _makeSatellite();
+        _makeOrbitLine();
+        return () => {
+            const satellite = solarSystemScene.getObjectByName('satellite');
+            const orbitLine = solarSystemScene.getObjectByName('orbitLine');
+            if (satellite)
+                solarSystemScene.remove(satellite)
+            if (orbitLine)
+                solarSystemScene.remove(orbitLine)
+        }
+    }, []);
 
     return (
         <></>
